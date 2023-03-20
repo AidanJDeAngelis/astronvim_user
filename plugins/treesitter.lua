@@ -39,12 +39,14 @@ return {
       swap = {
         enable = true,
         swap_next = {
-          ["<leader>lf>"] = { query = "@function.outer", desc = "Swap next function" },
-          ["<leader>lp>"] = { query = "@parameter.inner", desc = "Swap next parameter" },
+          [">c"] = { query = "@class.outer", desc = "Swap next class" },
+          [">f"] = { query = "@function.outer", desc = "Swap next function" },
+          [">p"] = { query = "@parameter.inner", desc = "Swap next parameter" },
         },
         swap_previous = {
-          ["<leader>lf<"] = { query = "@function.outer", desc = "Swap prev function" },
-          ["<leader>lp<"] = { query = "@parameter.inner", desc = "Swap prev parameter" },
+          ["<c"] = { query = "@class.outer", desc = "Swap prev class" },
+          ["<f"] = { query = "@function.outer", desc = "Swap prev function" },
+          ["<p"] = { query = "@parameter.inner", desc = "Swap prev parameter" },
         },
       },
     },

@@ -25,6 +25,9 @@ return {
     neovide_floating_blur_amount_y = 5,
     neovide_remember_window_size = true,
     neovide_cursor_vfx_mode = "railgun",
+    -- Undotree Configuration
+    undotree_WindowLayout = 4,
+    undotree_SetFocusWhenToggle = 1,
   },
 }
 -- If you need more control, you can use the function()...end notation

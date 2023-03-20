@@ -30,7 +30,7 @@ return {
     event = "User Astrofile",
     config = function() require("leap").add_default_mappings() end,
   },
-  { "mbbill/undotree" },
+  { "mbbill/undotree", event = "User AstroFile" },
   -- Appearance
   {
     "toppair/peek.nvim",

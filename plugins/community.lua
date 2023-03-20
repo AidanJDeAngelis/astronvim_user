@@ -38,7 +38,8 @@ return {
   {
     "smartcolumn.nvim",
     opts = {
-      colorcolumn = { "80", "100" },
+      colorcolumn = { "100" },
+      scope = "line",
       disabled_filetypes = {
         "help",
         "text",
@@ -58,4 +59,22 @@ return {
   },
   { import = "astrocommunity.color.tint-nvim" },
   { import = "astrocommunity.color.modes-nvim" },
+  {
+    "modes.nvim",
+    config = function(_, opts)
+      local status = require "astronvim.utils.status"
+      local C = status.env.fallback_colors
+      local get_hlgroup = require("astronvim.utils").get_hlgroup
+
+      local HeirlineInsert = get_hlgroup("HeirlineInsert", { bg = nil }).bg or status.hl.lualine_mode("insert", C.green)
+      local HeirlineVisual = get_hlgroup("HeirlineVisual", { bg = nil }).bg
+        or status.hl.lualine_mode("visual", C.purple)
+
+      opts.colors = {
+        insert = HeirlineInsert,
+        visual = HeirlineVisual,
+      }
+      opts.line_opacity = 0.25
+    end,
+  },
 }
