@@ -31,4 +31,33 @@ return {
     config = function() require("leap").add_default_mappings() end,
   },
   { "mbbill/undotree" },
+  -- Appearance
+  {
+    "toppair/peek.nvim",
+    event = "User Astrofile",
+    build = "deno task --quiet build:fast",
+    config = function()
+      local peek = require "peek"
+      peek.setup {}
+      local cmd = vim.api.nvim_create_user_command
+      cmd("PeekOpen", require("peek").open, {})
+      cmd("PeekClose", require("peek").close, {})
+    end,
+  },
+  { "Eandrju/cellular-automaton.nvim", event = "User Astrofile" },
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+  },
+  {
+    "folke/twilight.nvim",
+    event = "User Astrofile",
+    config = function()
+      require("twilight").setup {
+        dimming = {
+          inactive = true,
+        },
+      }
+    end,
+  },
 }
