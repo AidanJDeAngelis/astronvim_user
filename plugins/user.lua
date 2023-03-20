@@ -9,10 +9,26 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  -- File Navigation
   {
     "ThePrimeagen/harpoon",
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
   },
+  -- Code Manipulation and Navigation
+  {
+    "kylechui/nvim-surround",
+    event = "User Astrofile",
+    config = function() require("nvim-surround").setup {} end,
+  },
+  {
+    "ggandor/leap.nvim",
+    dependencies = {
+      "tpope/vim-repeat",
+    },
+    event = "User Astrofile",
+    config = function() require("leap").add_default_mappings() end,
+  },
+  { "mbbill/undotree" },
 }
