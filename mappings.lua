@@ -6,7 +6,6 @@
 local nmap = {
   -- Disable Builtins
   ["<leader>o"] = false,
-  ["<leader>e"] = false,
   ["<leader>c"] = false,
   ["<leader>C"] = false,
   ["<leader>h"] = false,
@@ -20,7 +19,6 @@ local nmap = {
   ["<leader>tt"] = false,
   ["<leader>tu"] = false,
   ["<leader>ub"] = false,
-  ["<leader>uC"] = false,
   ["<leader>un"] = false,
 
   -- Remap Builtins
@@ -39,13 +37,31 @@ local nmap = {
   ["<leader>fH"] = { function() require("telescope.builtin").help_tags() end, desc = "Find help" },
   ["<leader>bq"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" },
   ["<leader>bQ"] = { function() require("astronvim.utils.buffer").close(0, true) end, desc = "Force close buffer" },
+  ["<leader>uc"] = {
+    function()
+      if vim.g.codeium_enabled then
+        vim.cmd "CodeiumDisable"
+        vim.g.codium_enabled = false
+      else
+        vim.cmd "CodeiumEnable"
+        vim.g.codium_enabled = true
+      end
+    end,
+    desc = "Toggle Codeium autocomplete",
+  },
+  ["<leader>uC"] = { require("astronvim.utils.ui").toggle_cmp, desc = "Toggle cmp autocomplete" },
+
+  -- Buffers and Tabs
+  ["<leader>bt"] = { name = "󰓩 Tabs" },
+  ["<leader>btn"] = { "<cmd>tabnew<CR>", desc = "New tab" },
+  ["<leader>btq"] = { "<cmd>tabclose<CR>", desc = "Close tab" },
 
   -- Files
   ["<leader>fp"] = {
     function() require("telescope").extensions.project.project {} end,
     desc = "Find projects",
   },
-  ["<leader>fh"] = { name = "󰓾 Harpoon" },
+  ["<leader>fh"] = { name = "󰓾 Harpoon", desc = "󰓾 Harpoon" },
   ["<leader>fhm"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "Toggle quick menu" },
   ["<leader>fha"] = { function() require("harpoon.mark").add_file() end, desc = "Add file" },
   ["<leader>fhd"] = { function() require("harpoon.mark").rm_file() end, desc = "Remove file" },
@@ -64,14 +80,37 @@ local nmap = {
 
   -- Text Manipulation
   ["x"] = { '"_x', desc = "which_key_ignore" },
-  ["<C-p>"] = { '"+p', desc = "Paste from clipboard" },
-  ["<C-x>"] = { '"+d', desc = "Cut into clipboard" },
-  ["<C-y>"] = { '"+y', desc = "Yank into clipboard" },
-  ["<leader>U"] = { name = " UndoTree" },
-  ["<leader>Ut"] = { "<cmd>UndotreeToggle<cr>", desc = "Toggle Undotree" },
-  ["<leader>Uf"] = { "<cmd>UndotreeFocus<cr>", desc = "Focus Undotree" },
+  ["<leader>e"] = { name = " Edit", desc = " Edit" },
+  ["<leader>ep"] = { '"+p', desc = "Paste from clipboard" },
+  ["<leader>ed"] = { '"+d', desc = "Cut into clipboard" },
+  ["<leader>eD"] = { '"_d', desc = "Delete into the void" },
+  ["<leader>ey"] = { '"+y', desc = "Yank into clipboard" },
+  ["<leader>et"] = { "<cmd>UndotreeToggle<cr>", desc = "Toggle Undotree" },
+  ["<leader>ef"] = { "<cmd>UndotreeFocus<cr>", desc = "Focus Undotree" },
+
+  -- Tests
+  ["<leader>T"] = { name = "󰙨 Test" },
+  ["<leader>Tr"] = { function() require("neotest").run.run() end, desc = "Run nearest test" },
+  ["<leader>TR"] = { function() require("neotest").run.run(vim.fn.expand "%") end, desc = "Run tests in file" },
+  ["<leader>Td"] = { function() require("neotest").run.run { strategy = "dap" } end, desc = "Debug nearest test" },
+  ["<leader>Tq"] = { function() require("neotest").run.stop() end, desc = "Stop test" },
+}
+
+local vmap = {
+  -- Movement
+  ["<C-d>"] = nmap["<C-d>"],
+  ["<C-u>"] = nmap["<C-u>"],
+  -- Text Manipulation
+  ["<leader>e"] = nmap["<leader>e"],
+  ["<leader>ep"] = nmap["<leader>ep"],
+  ["<leader>ed"] = nmap["<leader>ed"],
+  ["<leader>eD"] = nmap["<leader>eD"],
+  ["<leader>ey"] = nmap["<leader>ey"],
+  ["<leader>et"] = nmap["<leader>et"],
+  ["<leader>ef"] = nmap["<leader>ef"],
 }
 
 return {
   n = nmap,
+  v = vmap,
 }

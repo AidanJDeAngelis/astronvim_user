@@ -2,6 +2,14 @@ return {
   -- Disable defaults
   { "max397574/better-escape.nvim", enabled = false },
   -- Reconfigure defaults
+  {
+    "AstroNvim/astrotheme",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      plugins = { ["dashboard-nvim"] = true },
+    },
+  },
   { "lewis6991/gitsigns.nvim", opts = { numhl = true } },
   {
     "akinsho/toggleterm.nvim",

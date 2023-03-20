@@ -6,7 +6,11 @@ return {
 
   -- Code Awareness
   { import = "astrocommunity.syntax.hlargs-nvim" },
+  -- Test Running
+  { import = "astrocommunity.test.neotest" },
   -- Appearance
+  { import = "astrocommunity.colorscheme.tokyonight" },
+  { import = "astrocommunity.colorscheme.oxocarbon" },
   { import = "astrocommunity.utility.noice-nvim" },
   {
     "noice.nvim",
