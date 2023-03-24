@@ -34,6 +34,7 @@ local nmap = {
     end,
     desc = "Toggle Explorer Focus",
   },
+  ["<leader>fo"] = { function() require("telescope.builtin").oldfiles { only_cwd = true } end, desc = "Find history" },
   ["<leader>fH"] = { function() require("telescope.builtin").help_tags() end, desc = "Find help" },
   ["<leader>bq"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" },
   ["<leader>bQ"] = { function() require("astronvim.utils.buffer").close(0, true) end, desc = "Force close buffer" },
