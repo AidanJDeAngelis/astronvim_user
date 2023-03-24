@@ -11,33 +11,33 @@ return {
   -- Appearance
   { import = "astrocommunity.colorscheme.tokyonight" },
   { import = "astrocommunity.colorscheme.oxocarbon" },
-  { import = "astrocommunity.utility.noice-nvim" },
-  {
-    "noice.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-    opts = function(_, opts)
-      opts.messages = {
-        view_search = false,
-      }
-      opts.routes = {
-        {
-          filter = {
-            event = "msg_show",
-            kind = "",
-            find = "written",
-          },
-          opts = { skip = true },
-        },
-      }
-      opts.presets = {
-        command_palette = true, -- position the cmdline and popupmenu together
-        lsp_doc_border = true, -- add a border to hover docs and signature help
-      }
-    end,
-  },
+  { import = "astrocommunity.utility.noice-nvim", enabled = false },
+  -- {
+  --   "noice.nvim",
+  --   dependencies = {
+  --     "MunifTanjim/nui.nvim",
+  --     "rcarriga/nvim-notify",
+  --   },
+  --   opts = function(_, opts)
+  --     opts.messages = {
+  --       view_search = false,
+  --     }
+  --     opts.routes = {
+  --       {
+  --         filter = {
+  --           event = "msg_show",
+  --           kind = "",
+  --           find = "written",
+  --         },
+  --         opts = { skip = true },
+  --       },
+  --     }
+  --     opts.presets = {
+  --       command_palette = true, -- position the cmdline and popupmenu together
+  --       lsp_doc_border = true, -- add a border to hover docs and signature help
+  --     }
+  --   end,
+  -- },
   { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
   {
     "smartcolumn.nvim",
