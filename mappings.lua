@@ -50,6 +50,7 @@ local nmap = {
     desc = "Toggle Codeium autocomplete",
   },
   ["<leader>uC"] = { require("astronvim.utils.ui").toggle_cmp, desc = "Toggle cmp autocomplete" },
+  ["<leader>th"] = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
 
   -- Buffers and Tabs
   ["<leader>bt"] = { name = "󰓩 Tabs" },
