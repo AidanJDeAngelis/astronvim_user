@@ -83,6 +83,18 @@ return {
         dimming = {
           inactive = true,
         },
+        expand = {
+          "class_definition",
+          "function",
+          "function_definition",
+          "method",
+          "table",
+          "table_constructor",
+          "dictionary",
+          "if_statement",
+          "for_statement",
+          "try_statement",
+        },
       }
     end,
   },

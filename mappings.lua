@@ -72,7 +72,17 @@ local nmap = {
   ["<leader>F"] = { name = "which_key_ignore" },
   ["<leader>FM"] = { name = "F*** My" },
   ["<leader>FML"] = { "<cmd>CellularAutomaton make_it_rain<cr>", desc = "F*** My Life" },
-  ["<leader>ut"] = { "<cmd>Twilight<CR>", desc = "Toggle twilight" },
+  ["<leader>ut"] = {
+    function()
+      vim.cmd "Twilight"
+      require("hlargs").toggle()
+    end,
+    desc = "Toggle twilight",
+  },
+  ["<leader>uh"] = {
+    function() require("hlargs").toggle() end,
+    desc = "Toggle hlargs",
+  },
 
   -- Movement
   ["<C-d>"] = { "<C-d>zz", desc = "Half page down" },
