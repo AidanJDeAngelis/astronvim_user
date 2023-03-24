@@ -37,14 +37,6 @@ return {
     event = "User AstroFile",
     config = function() require("nvim-surround").setup {} end,
   },
-  {
-    "ggandor/leap.nvim",
-    dependencies = {
-      "tpope/vim-repeat",
-    },
-    event = "User AstroFile",
-    config = function() require("leap").add_default_mappings() end,
-  },
   { "mbbill/undotree", event = "User AstroFile" },
 
   -- Code Completion

@@ -4,6 +4,8 @@ return {
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
+  -- Navigation
+  { import = "astrocommunity.motion.leap-nvim" },
   -- Code Awareness
   { import = "astrocommunity.syntax.hlargs-nvim" },
   -- Test Running
