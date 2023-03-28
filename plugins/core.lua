@@ -174,4 +174,92 @@ return {
       return opts
     end,
   },
+  {
+    "goolord/alpha-nvim",
+    opts = function(plugin, opts)
+      require "plugins.configs.alpha"(plugin, opts)
+      require "alpha.term"
+
+      ASCII_IMAGES_FOLDER = os.getenv "HOME" .. "/.config/nvim/lua/user/static"
+
+      local function list_files(path, extension)
+        local files = {}
+        local pfile = io.popen("ls " .. path .. "/*" .. extension)
+
+        for filename in pfile:lines() do
+          table.insert(files, filename)
+        end
+
+        return files
+      end
+
+      local function get_random_ascii_image(path)
+        math.randomseed(os.clock())
+
+        -- Ascii images have the extension .cat
+        local images = list_files(path, ".cat")
+
+        return images[math.random(1, #images)]
+      end
+
+      local function get_ascii_image_dim(path)
+        local width = 0
+        local height = 0
+
+        local pfile = io.open(path, "r")
+
+        for line in pfile:lines() do
+          -- Take into account colored output
+          local current_width = vim.fn.strdisplaywidth(line)
+          if current_width > width then width = current_width end
+          height = height + 1
+        end
+
+        -- For some reason, after the last update or something,
+        -- I have to add 2 to width, otherwise the image is not
+        -- displayed correctly
+        return { width, height }
+      end
+
+      local random_image = get_random_ascii_image(ASCII_IMAGES_FOLDER)
+      local image_width, image_height = unpack(get_ascii_image_dim(random_image))
+
+      -- This avoids "process exited message"
+      local command = "lolcat -F 0.2 -p 2 "
+
+      local terminal = {
+        type = "terminal",
+        command = command .. random_image,
+        width = image_width,
+        height = image_height,
+        opts = {
+          redraw = true,
+          window_config = {},
+        },
+      }
+
+      local dashboard = require "alpha.themes.dashboard"
+      dashboard.section.terminal = terminal
+
+      local button = require("astronvim.utils").alpha_button
+      dashboard.section.buttons.val = {
+        button("LDR f o", "  Recents  "),
+        button("LDR f p", "  Projects  "),
+        button("LDR f f", "  Find File  "),
+        button("LDR f w", "  Find Word  "),
+        button("LDR f n", "  New File  "),
+        button("LDR S l", "  Last Session  "),
+      }
+
+      dashboard.config.opts.noautocmd = true
+      dashboard.config.layout = {
+        { type = "padding", val = vim.fn.max { 2, vim.fn.floor(vim.fn.winheight(0) * 0.2) } },
+        terminal,
+        { type = "padding", val = 2 },
+        dashboard.section.buttons,
+        dashboard.section.footer,
+      }
+      return dashboard
+    end,
+  },
 }
