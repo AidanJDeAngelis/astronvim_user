@@ -262,4 +262,13 @@ return {
       return dashboard
     end,
   },
+  {
+    "rcarriga/nvim-notify",
+    opts = function(plugin, opts)
+      require "plugins.configs.notify"(plugin, opts)
+      opts.fps = 60
+      opts.timeout = 2000
+      return opts
+    end,
+  },
 }
