@@ -20,6 +20,8 @@ local nmap = {
   ["<leader>tu"] = false,
   ["<leader>ub"] = false,
   ["<leader>un"] = false,
+  ["<leader>uy"] = false,
+  ["<leader>uY"] = false, -- TODO: move to LSP mappings
 
   -- Remap Builtins
   ["<leader>fe"] = { name = "󰙅 Explorer" },
@@ -82,6 +84,10 @@ local nmap = {
   ["<leader>uh"] = {
     function() require("hlargs").toggle() end,
     desc = "Toggle hlargs",
+  },
+  ["<leader>uz"] = {
+    "<cmd>ZenMode<CR>",
+    desc = "Toggle zen mode",
   },
 
   -- Movement

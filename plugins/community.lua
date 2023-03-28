@@ -4,6 +4,14 @@ return {
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
+  -- Languages
+  { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.toml" },
   -- Navigation
   { import = "astrocommunity.motion.leap-nvim" },
   -- Code Awareness
@@ -83,4 +91,5 @@ return {
       opts.line_opacity = 0.25
     end,
   },
+  { import = "astrocommunity.editing-support.zen-mode-nvim" },
 }
