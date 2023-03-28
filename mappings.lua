@@ -108,10 +108,22 @@ local nmap = {
 
   -- Tests
   ["<leader>T"] = { name = "󰙨 Test" },
-  ["<leader>Tr"] = { function() require("neotest").run.run() end, desc = "Run nearest test" },
-  ["<leader>TR"] = { function() require("neotest").run.run(vim.fn.expand "%") end, desc = "Run tests in file" },
-  ["<leader>Td"] = { function() require("neotest").run.run { strategy = "dap" } end, desc = "Debug nearest test" },
   ["<leader>Tq"] = { function() require("neotest").run.stop() end, desc = "Stop test" },
+  ["<leader>Tt"] = { function() require("neotest").summary.toggle() end, desc = "Toggle summary" },
+  ["<leader>Tr"] = { name = " Run tests" },
+  ["<leader>Trr"] = { function() require("neotest").run.run() end, desc = "Run nearest test" },
+  ["<leader>TrR"] = { function() require("neotest").run.run(vim.fn.expand "%") end, desc = "Run all tests in file" },
+  ["<leader>Trl"] = { function() require("neotest").run.run_last() end, desc = "Re-run last test" },
+  ["<leader>Td"] = { name = " Debug tests" },
+  ["<leader>Tdr"] = { function() require("neotest").run.run { strategy = "dap" } end, desc = "Debug nearest test" },
+  ["<leader>TdR"] = {
+    function() require("neotest").run.run { vim.fn.expand "%", strategy = "dap" } end,
+    desc = "Debug all tests in file",
+  },
+  ["<leader>Tdl"] = {
+    function() require("neotest").run.run_last { vim.fn.expand "%", strategy = "dap" } end,
+    desc = "Debug last test",
+  },
 }
 
 local vmap = {

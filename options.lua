@@ -9,6 +9,7 @@ return {
     wrap = false, -- sets vim.opt.wrap
     undodir = os.getenv "HOME" .. "/.vim/undodir",
     clipboard = "",
+    guifont = "Hack Nerd Font:h15",
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
