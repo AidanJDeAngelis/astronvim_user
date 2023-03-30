@@ -225,7 +225,7 @@ return {
       local image_width, image_height = unpack(get_ascii_image_dim(random_image))
 
       -- This avoids "process exited message"
-      local command = "lolcat -F 0.2 -p 2 "
+      local command = "lolcat "
 
       local terminal = {
         type = "terminal",
