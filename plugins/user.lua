@@ -17,17 +17,17 @@ return {
       "nvim-lua/plenary.nvim",
     },
     event = "User AstroFile",
-    opts = {
-      dir = "~/Documents/Scratch",
-      completion = {
-        nvim_cmp = true,
-      },
-    },
   },
   {
     "epwalsh/obsidian.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      dir = "~/Documents/Scratch",
+      completion = {
+        nvim_cmp = true,
+      },
     },
   },
 
