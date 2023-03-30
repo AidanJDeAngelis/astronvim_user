@@ -25,6 +25,9 @@ return {
         rope_completion = {
           enabled = true,
         },
+        rope_autoimport = {
+          enabled = true,
+        },
         yapf = {
           enabled = false,
         },
