@@ -8,7 +8,7 @@ return function(local_vim)
   local_vim.opt.wrap = false -- sets vim.opt.wrap
   local_vim.opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
   local_vim.opt.clipboard = ""
-  local_vim.opt.guifont = "Hack Nerd Font:h15"
+  local_vim.opt.guifont = "Hack Nerd Font:h18"
 
   -- Globals --
   local_vim.g.mapleader = " " -- sets vim.g.mapleader
