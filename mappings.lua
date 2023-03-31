@@ -75,11 +75,15 @@ local nmap = {
   ["<leader>FM"] = { name = "F*** My" },
   ["<leader>FML"] = { "<cmd>CellularAutomaton make_it_rain<cr>", desc = "F*** My Life" },
   ["<leader>ut"] = {
+    function() require("tint").toggle() end,
+    desc = "Toggle tint",
+  },
+  ["<leader>uT"] = {
     function()
       vim.cmd "Twilight"
       require("hlargs").toggle()
     end,
-    desc = "Toggle twilight",
+    desc = "Toggle Twilight",
   },
   ["<leader>uh"] = {
     function() require("hlargs").toggle() end,
