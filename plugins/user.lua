@@ -32,11 +32,6 @@ return {
   },
 
   -- Code Manipulation and Navigation
-  {
-    "kylechui/nvim-surround",
-    event = "User AstroFile",
-    config = function() require("nvim-surround").setup {} end,
-  },
   { "mbbill/undotree", event = "User AstroFile" },
 
   -- Code Completion
