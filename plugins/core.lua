@@ -225,13 +225,13 @@ return {
       local image_width, image_height = unpack(get_ascii_image_dim(random_image))
 
       -- This avoids "process exited message"
-      local command = "lolcat "
+      local command = ASCII_IMAGES_FOLDER .. "/animated_lolcat.sh "
 
       local terminal = {
         type = "terminal",
         command = command .. random_image,
         width = image_width,
-        height = image_height,
+        height = image_height + 1,
         opts = {
           redraw = true,
           window_config = {},
@@ -247,7 +247,6 @@ return {
         button("LDR f p", "  Projects  "),
         button("LDR f f", "  Find File  "),
         button("LDR f w", "  Find Word  "),
-        button("LDR f n", "  New File  "),
         button("LDR S l", "  Last Session  "),
       }
 
