@@ -101,7 +101,7 @@ local nmap = {
   ["N"] = { "Nzzzv", desc = "Prev" },
 
   -- Text Manipulation
-  ["x"] = { '"_x', desc = "which_key_ignore" },
+  ["x"] = { '"_x', desc = "which_key_ignore", noremap = true },
   ["<leader>e"] = { name = " Edit", desc = " Edit" },
   ["<leader>ep"] = { '"+p', desc = "Paste from clipboard" },
   ["<leader>ed"] = { '"+d', desc = "Cut into clipboard" },
@@ -135,8 +135,9 @@ local vmap = {
   ["<C-d>"] = nmap["<C-d>"],
   ["<C-u>"] = nmap["<C-u>"],
   -- Text Manipulation
+  ["p"] = { '"_dP', desc = "which_key_ignore" },
   ["<leader>e"] = nmap["<leader>e"],
-  ["<leader>ep"] = nmap["<leader>ep"],
+  ["<leader>ep"] = { '"_d"+P', desc = "Paste from clipboard" },
   ["<leader>ed"] = nmap["<leader>ed"],
   ["<leader>eD"] = nmap["<leader>eD"],
   ["<leader>ey"] = nmap["<leader>ey"],
