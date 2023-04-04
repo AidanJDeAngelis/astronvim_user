@@ -1,2 +1,9 @@
 -- Set colorscheme to use
-return "tokyonight-night"
+local colorschemes = {
+  "tokyonight-night",
+  "carbonfox",
+}
+
+math.randomseed(os.clock())
+
+return colorschemes[math.random(1, #colorschemes)]

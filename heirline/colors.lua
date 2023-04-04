@@ -7,9 +7,9 @@ return function(hl)
   hl.git_added = comment_fg
   hl.git_changed = comment_fg
   hl.git_removed = comment_fg
-  hl.blank_bg = get_hlgroup("Folded").bg
+  hl.blank_bg = get_hlgroup("Folded").fg
   hl.file_info_bg = get_hlgroup("Visual").bg
-  hl.nav_icon_bg = get_hlgroup("String").bg
+  hl.nav_icon_bg = get_hlgroup("String").fg
   hl.nav_fg = hl.nav_icon_bg
   hl.folder_icon_bg = get_hlgroup("Error").fg
   return hl

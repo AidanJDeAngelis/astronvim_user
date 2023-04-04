@@ -22,7 +22,20 @@ return {
   { import = "astrocommunity.test.neotest" },
   -- Appearance
   { import = "astrocommunity.colorscheme.tokyonight" },
-  { import = "astrocommunity.colorscheme.oxocarbon" },
+  { import = "astrocommunity.colorscheme.nightfox" },
+  {
+    "EdenEast/nightfox.nvim",
+    opts = function(_, opts)
+      opts.options.styles = {
+        comments = "italic",
+        conditionals = "bold",
+        keywords = "bold",
+        types = "bold,italic",
+      }
+      opts.options.module_default = true
+      return opts
+    end,
+  },
   { import = "astrocommunity.utility.noice-nvim" },
   {
     "noice.nvim",
