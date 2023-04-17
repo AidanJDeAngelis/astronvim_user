@@ -1,6 +1,4 @@
 return {
-  -- Disable defaults
-  { "max397574/better-escape.nvim", enabled = false },
   -- Reconfigure defaults
   {
     "AstroNvim/astrotheme",

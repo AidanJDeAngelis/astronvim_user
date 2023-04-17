@@ -51,6 +51,13 @@ return {
     end,
   },
 
+  -- LSP extensions
+  {
+    "linux-cultist/venv-selector.nvim",
+    opts = {},
+    keys = { { "<leader>lv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv" } },
+  },
+
   -- Appearance
   {
     "olimorris/onedarkpro.nvim",

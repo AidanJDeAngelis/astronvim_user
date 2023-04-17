@@ -6,6 +6,7 @@ return {
 
   -- Languages
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.markdown" },
@@ -16,6 +17,8 @@ return {
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.debugging.nvim-bqf" },
+  -- Text Manipulation
+  { import = "astrocommunity.project.nvim-spectre" },
   -- Code Awareness
   { import = "astrocommunity.syntax.hlargs-nvim" },
   -- Test Running
