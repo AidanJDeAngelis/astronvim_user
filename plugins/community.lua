@@ -19,6 +19,7 @@ return {
   { import = "astrocommunity.debugging.nvim-bqf" },
   -- Text Manipulation
   { import = "astrocommunity.project.nvim-spectre" },
+  { import = "astrocommunity.lsp.inc-rename" },
   -- Code Awareness
   { import = "astrocommunity.syntax.hlargs-nvim" },
   -- Test Running
@@ -64,6 +65,7 @@ return {
       opts.presets = {
         -- command_palette = true, -- position the cmdline and popupmenu together
         lsp_doc_border = true, -- add a border to hover docs and signature help
+        inc_rename = true, -- enables an input dialog for inc-rename.nvim
       }
       opts.views = {
         cmdline_popup = {
