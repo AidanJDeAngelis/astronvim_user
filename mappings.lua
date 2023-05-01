@@ -40,20 +40,11 @@ local nmap = {
   ["<leader>fH"] = { function() require("telescope.builtin").help_tags() end, desc = "Find help" },
   ["<leader>bq"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" },
   ["<leader>bQ"] = { function() require("astronvim.utils.buffer").close(0, true) end, desc = "Force close buffer" },
-  ["<leader>uc"] = {
-    function()
-      if vim.g.codeium_enabled then
-        vim.cmd "CodeiumDisable"
-        vim.g.codium_enabled = false
-      else
-        vim.cmd "CodeiumEnable"
-        vim.g.codium_enabled = true
-      end
-    end,
-    desc = "Toggle Codeium autocomplete",
-  },
-  ["<leader>uC"] = { require("astronvim.utils.ui").toggle_cmp, desc = "Toggle cmp autocomplete" },
   ["<leader>th"] = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
+
+  -- AI / Autocomplete
+  ["<leader>a"] = { name = "󰚩 AI/Autocomplete" },
+  ["<leader>aC"] = { function() require("astronvim.utils.ui").toggle_cmp() end, desc = "Toggle cmp" },
 
   -- Buffers and Tabs
   ["<leader>bt"] = { name = "󰓩 Tabs" },

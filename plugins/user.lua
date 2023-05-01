@@ -41,13 +41,19 @@ return {
     init = function()
       vim.g.codeium_enabled = 0
       vim.g.codeium_disable_bindings = 1
-      vim.g.codeium_idle_delay = 500
     end,
     config = function()
       vim.keymap.set("i", "<S-Right>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
       vim.keymap.set("i", "<S-Up>", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
       vim.keymap.set("i", "<S-Down>", function() return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
       vim.keymap.set("i", "<S-Left>", function() return vim.fn["codeium#Clear"]() end, { expr = true })
+      vim.keymap.set("n", "<leader>ac", function()
+        if vim.g.codeium_enabled == true then
+          vim.cmd "CodeiumDisable"
+        else
+          vim.cmd "CodeiumEnable"
+        end
+      end, { noremap = true, desc = "Toggle Codeium active" })
     end,
   },
 
