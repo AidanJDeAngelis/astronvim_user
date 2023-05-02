@@ -2,6 +2,7 @@
 local colorschemes = {
   "tokyonight-night",
   "carbonfox",
+  "fluoromachine",
 }
 
 math.randomseed(os.clock())

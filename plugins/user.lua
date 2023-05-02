@@ -71,6 +71,20 @@ return {
     priority = 1000,
   },
   {
+    "maxmx03/fluoromachine.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      brightness = 1.0,
+      theme = (function()
+        local colorshemes = { "fluoromachine", "retrowave" }
+        math.randomseed(os.clock())
+
+        return colorshemes[math.random(1, #colorshemes)]
+      end)(),
+    },
+  },
+  {
     "toppair/peek.nvim",
     event = "User AstroFile",
     build = "deno task --quiet build:fast",
