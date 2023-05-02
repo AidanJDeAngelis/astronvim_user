@@ -239,8 +239,8 @@ return {
       dashboard.section.buttons.val = {
         button("LDR f o", "  Recents  "),
         button("LDR f p", "  Projects  "),
-        button("LDR f f", "  Find File  "),
-        button("LDR f w", "  Find Word  "),
+        button("LDR f f", "󰥨  Find File  "),
+        button("LDR f w", "󰺮  Find Word  "),
         button("LDR S l", "  Last Session  "),
       }
 
