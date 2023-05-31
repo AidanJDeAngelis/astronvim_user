@@ -6,7 +6,7 @@ return {
         flake8 = {
           enabled = true,
           maxComplexity = 15,
-          maxLineLength = 99,
+          maxLineLength = 120,
         },
         jedi_completion = {
           include_class_objects = true,

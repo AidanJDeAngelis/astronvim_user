@@ -10,12 +10,6 @@ return {
   },
   { "lewis6991/gitsigns.nvim", opts = { numhl = true } },
   {
-    "akinsho/toggleterm.nvim",
-    opts = {
-      terminal_mappings = false,
-    },
-  },
-  {
     "kevinhwang91/nvim-ufo",
     opts = function(_, opts)
       opts.fold_virt_text_handler = function(virtText, lnum, endLnum, width, truncate)
