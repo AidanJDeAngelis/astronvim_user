@@ -1,5 +1,6 @@
 return {
   -- Reconfigure defaults
+  { "akinsho/toggleterm.nvim", enabled = false },
   {
     "AstroNvim/astrotheme",
     lazy = false,

@@ -40,7 +40,6 @@ local nmap = {
   ["<leader>fH"] = { function() require("telescope.builtin").help_tags() end, desc = "Find help" },
   ["<leader>bq"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" },
   ["<leader>bQ"] = { function() require("astronvim.utils.buffer").close(0, true) end, desc = "Force close buffer" },
-  ["<leader>th"] = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
 
   -- AI / Autocomplete
   ["<leader>a"] = { name = "󰚩 AI/Autocomplete" },

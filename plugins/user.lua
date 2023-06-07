@@ -70,13 +70,23 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      brightness = 1.0,
       theme = (function()
-        local colorshemes = { "fluoromachine", "retrowave" }
+        local colorshemes = { "fluoromachine", "retrowave", "delta" }
         math.randomseed(os.clock())
 
         return colorshemes[math.random(1, #colorshemes)]
       end)(),
+      overrides = function(c)
+        return {
+          HeirlineInactive = { fg = c.bg, bg = c.bg },
+          HeirlineNormal = { fg = c.cyan, bg = c.cyan },
+          HeirlineInsert = { fg = c.green, bg = c.green },
+          HeirlineVisual = { fg = c.purple, bg = c.purple },
+          HeirlineReplace = { fg = c.red, bg = c.red },
+          HeirlineCommand = { fg = c.yellow, bg = c.yellow },
+          HeirlineTerminal = { fg = c.green, bg = c.green },
+        }
+      end,
     },
   },
   {

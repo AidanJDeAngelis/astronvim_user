@@ -20,7 +20,7 @@ return {
   { import = "astrocommunity.debugging.nvim-bqf" },
   -- Text Manipulation
   { import = "astrocommunity.project.nvim-spectre" },
-  { import = "astrocommunity.lsp.inc-rename" },
+  { import = "astrocommunity.lsp.inc-rename-nvim" },
   -- Code Awareness
   { import = "astrocommunity.syntax.hlargs-nvim" },
   -- Test Running
