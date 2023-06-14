@@ -1,6 +1,6 @@
 -- Set colorscheme to use
 local colorschemes = {
-  "tokyonight-night",
+  -- "tokyonight-night",
   "fluoromachine",
 }
 
