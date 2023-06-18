@@ -9,6 +9,8 @@ return function(local_vim)
   local_vim.opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
   local_vim.opt.clipboard = ""
   local_vim.opt.guifont = "Hack Nerd Font:h16"
+  local_vim.opt.scrolloff = 15
+  local_vim.opt.sidescrolloff = 10
 
   -- Globals --
   local_vim.g.mapleader = " " -- sets vim.g.mapleader
