@@ -3,6 +3,15 @@ return {
   "AstroNvim/astrocommunity",
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
+  -- AI
+  { import = "astrocommunity.completion.copilot-lua" },
+  -- {
+  --   "copilot.lua",
+  --   opts = function(_, opts)
+  --     opts.copilot_node_command = "/Users/angaidan/.local/share/rtx/installs/node/20.3.0/bin/node"
+  --   end,
+  -- },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- Terminal Integration
   { import = "astrocommunity.terminal-integration.flatten-nvim" },
   -- Languages
