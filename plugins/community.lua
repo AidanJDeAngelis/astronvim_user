@@ -5,11 +5,6 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
   -- AI
   { import = "astrocommunity.completion.copilot-lua" },
-  -- {
-  --   "copilot.lua",
-  --   opts = function(_, opts)
-  --     opts.copilot_node_command = "/Users/angaidan/.local/share/rtx/installs/node/20.3.0/bin/node"
-  --   end,
   -- },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- Terminal Integration
@@ -23,6 +18,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   -- Motion
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },

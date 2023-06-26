@@ -89,18 +89,6 @@ return {
       end,
     },
   },
-  {
-    "toppair/peek.nvim",
-    event = "User AstroFile",
-    build = "deno task --quiet build:fast",
-    config = function()
-      local peek = require "peek"
-      peek.setup {}
-      local cmd = vim.api.nvim_create_user_command
-      cmd("PeekOpen", require("peek").open, {})
-      cmd("PeekClose", require("peek").close, {})
-    end,
-  },
   { "Eandrju/cellular-automaton.nvim", event = "User AstroFile" },
   {
     "folke/twilight.nvim",
