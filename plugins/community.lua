@@ -11,6 +11,7 @@ return {
   { import = "astrocommunity.terminal-integration.flatten-nvim" },
   -- Languages
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.tailwindcss" },
