@@ -5,7 +5,7 @@ return {
         autoImportCompletions = true,
         autoSearchPaths = true,
         diagnosticMode = "workspace",
-        typeCheckingMode = "strict",
+        typeCheckingMode = "basic",
         useLibraryCodeForTypes = true,
       },
     },

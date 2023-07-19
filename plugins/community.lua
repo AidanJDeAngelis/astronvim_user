@@ -3,10 +3,10 @@ return {
   "AstroNvim/astrocommunity",
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
-  -- AI
-  { import = "astrocommunity.completion.copilot-lua" },
-  -- },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- Completion
+  { import = "astrocommunity.completion.cmp-cmdline" },
+  { import = "astrocommunity.completion.tabnine-nvim" },
+  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- Terminal Integration
   { import = "astrocommunity.terminal-integration.flatten-nvim" },
   -- Languages
@@ -21,18 +21,31 @@ return {
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   -- Motion
-  { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.debugging.nvim-bqf" },
   -- Text Manipulation
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.lsp.inc-rename-nvim" },
+  -- Diagnostics
+  { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- Code Awareness
   { import = "astrocommunity.syntax.hlargs-nvim" },
   -- Test Running
   { import = "astrocommunity.test.neotest" },
   -- Appearance
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.split-and-window.windows-nvim" },
+  { import = "astrocommunity.split-and-window.edgy-nvim" },
+  {
+    "edgy.nvim",
+    opts = function(_, opts)
+      opts.animate = { enabled = false }
+      return opts
+    end,
+  },
   { import = "astrocommunity.utility.noice-nvim" },
   {
     "noice.nvim",
