@@ -5,21 +5,18 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
   -- Completion
   { import = "astrocommunity.completion.cmp-cmdline" },
-  { import = "astrocommunity.completion.tabnine-nvim" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.codeium-vim" },
   -- Terminal Integration
   { import = "astrocommunity.terminal-integration.flatten-nvim" },
   -- Languages
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.tailwindcss" },
-  { import = "astrocommunity.pack.markdown" },
-  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.ps1" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- Motion
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
