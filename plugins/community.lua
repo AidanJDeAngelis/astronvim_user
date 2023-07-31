@@ -10,11 +10,13 @@ return {
   { import = "astrocommunity.terminal-integration.flatten-nvim" },
   -- Languages
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.ps1" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.nix" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- Motion
@@ -50,7 +52,7 @@ return {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
     },
-    cond = not vim.g.neovide,
+    cond = true,
     opts = function(_, opts)
       opts.messages = {
         view_search = false,
