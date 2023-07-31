@@ -26,6 +26,11 @@ return {
   -- Text Manipulation
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.lsp.inc-rename-nvim" },
+  { import = "astrocommunity.editing-support.yanky-nvim" },
+  {
+    "yanky.nvim",
+    opts = function(_, opts) opts.ring.history_length = 10 end,
+  },
   -- Diagnostics
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
