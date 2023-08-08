@@ -12,6 +12,10 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
+  {
+    "venv-selector.nvim",
+    opts = function(_, opts) opts.name = { "venv", ".venv" } end,
+  },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.ps1" },
   { import = "astrocommunity.pack.yaml" },
