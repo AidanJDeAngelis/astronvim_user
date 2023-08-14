@@ -21,7 +21,6 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.nix" },
-  { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- Motion
   { import = "astrocommunity.motion.flash-nvim" },
@@ -37,23 +36,10 @@ return {
   },
   -- Diagnostics
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- Code Awareness
   { import = "astrocommunity.syntax.hlargs-nvim" },
-  -- Test Running
-  { import = "astrocommunity.test.neotest" },
   -- Appearance
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
-  { import = "astrocommunity.split-and-window.windows-nvim" },
-  { import = "astrocommunity.split-and-window.edgy-nvim" },
-  {
-    "edgy.nvim",
-    opts = function(_, opts)
-      opts.animate = { enabled = false }
-      return opts
-    end,
-  },
   { import = "astrocommunity.utility.noice-nvim" },
   {
     "noice.nvim",
@@ -115,61 +101,4 @@ return {
       }
     end,
   },
-  { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
-  {
-    "smartcolumn.nvim",
-    opts = {
-      colorcolumn = { "100" },
-      scope = "line",
-      disabled_filetypes = {
-        "help",
-        "text",
-        "markdown",
-        "mason",
-        "startify",
-        "aerial",
-        "alpha",
-        "dashboard",
-        "lazy",
-        "neogitstatus",
-        "NvimTree",
-        "neo-tree",
-        "Trouble",
-      },
-    },
-  },
-  { import = "astrocommunity.color.tint-nvim" },
-  {
-    "levouh/tint.nvim",
-    opts = {
-      window_ignore_function = function(winid)
-        local bufid = vim.api.nvim_win_get_buf(winid)
-        local buftype = vim.api.nvim_buf_get_option(bufid, "buftype")
-        local floating = vim.api.nvim_win_get_config(winid).relative ~= ""
-
-        -- Do not tint `terminal` or floating windows, tint everything else
-        return buftype == "terminal" or floating or buftype == "nowrite"
-      end,
-    },
-  },
-  { import = "astrocommunity.color.modes-nvim" },
-  {
-    "modes.nvim",
-    config = function(_, opts)
-      local status = require "astronvim.utils.status"
-      local C = status.env.fallback_colors
-      local get_hlgroup = require("astronvim.utils").get_hlgroup
-
-      local HeirlineInsert = get_hlgroup("HeirlineInsert", { bg = nil }).bg or status.hl.lualine_mode("insert", C.green)
-      local HeirlineVisual = get_hlgroup("HeirlineVisual", { bg = nil }).bg
-        or status.hl.lualine_mode("visual", C.purple)
-
-      opts.colors = {
-        insert = HeirlineInsert,
-        visual = HeirlineVisual,
-      }
-      opts.line_opacity = 0.25
-    end,
-  },
-  { import = "astrocommunity.editing-support.zen-mode-nvim" },
 }

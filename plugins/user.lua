@@ -78,6 +78,13 @@ return {
 
   -- Appearance
   {
+    "justinsgithub/oh-my-monokai.nvim",
+    lazy = false,
+    opts = {
+      devicons = true,
+    },
+  },
+  {
     "maxmx03/fluoromachine.nvim",
     lazy = false,
     priority = 1000,
