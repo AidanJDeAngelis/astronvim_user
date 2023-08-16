@@ -15,4 +15,5 @@ return function()
   --   },
   -- }
   vim.cmd "hi LineNr guibg=none guifg=#ffffff"
+  vim.cmd "hi WinSeparator guibg=none guifg=#ffffff"
 end
