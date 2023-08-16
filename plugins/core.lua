@@ -8,6 +8,10 @@ return {
       plugins = { ["dashboard-nvim"] = true },
     },
   },
+  {
+    "mrjones2014/smart-splits.nvim",
+    opts = function(_, opts) opts.default_amount = 5 end,
+  },
   { "lewis6991/gitsigns.nvim", opts = { numhl = true } },
   {
     "kevinhwang91/nvim-ufo",

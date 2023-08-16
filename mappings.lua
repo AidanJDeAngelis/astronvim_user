@@ -50,6 +50,17 @@ local nmap = {
   ["<leader>btn"] = { "<cmd>tabnew<CR>", desc = "New tab" },
   ["<leader>btq"] = { "<cmd>tabclose<CR>", desc = "Close tab" },
 
+  -- Windows
+  ["<C-w>r"] = { function() require("smart-splits").start_resize_mode() end, desc = "Resize Mode (HJKL)" },
+  ["<C-w>p"] = {
+    function()
+      wp = require "window-picker"
+      window_id = wp.pick_window { hint = "floating-big-letter" }
+      vim.api.nvim_set_current_win(window_id)
+    end,
+    desc = "Pick Window",
+  },
+
   -- Files
   ["<leader>fp"] = {
     function() require("telescope").extensions.project.project {} end,
