@@ -14,4 +14,5 @@ return function()
   --     ["~/%.config/foo/.*"] = "fooscript",
   --   },
   -- }
+  vim.cmd "hi LineNr guibg=none guifg=#ffffff"
 end
