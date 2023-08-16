@@ -6,7 +6,9 @@ return function(local_vim)
   local_vim.opt.spell = false -- sets vim.opt.spell
   local_vim.opt.signcolumn = "auto" -- sets vim.opt.signcolumn to auto
   local_vim.opt.wrap = false -- sets vim.opt.wrap
-  local_vim.opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
+  local_vim.opt.undodir = os.getenv "HOME" .. "/.cache/nvim/undo"
+  local_vim.opt.undofile = true
+  local_vim.opt.swapfile = false
   local_vim.opt.clipboard = ""
   local_vim.opt.guifont = "Hack Nerd Font:h16"
   local_vim.opt.scrolloff = 15
