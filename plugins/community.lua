@@ -29,6 +29,8 @@ return {
   -- Text Manipulation
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.lsp.inc-rename-nvim" },
+  { import = "astrocommunity.editing-support.refactoring-nvim" },
+  { import = "astrocommunity.editing-support.telescope-undo-nvim" },
   { import = "astrocommunity.editing-support.yanky-nvim" },
   {
     "yanky.nvim",

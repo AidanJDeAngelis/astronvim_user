@@ -33,8 +33,5 @@ return function(local_vim)
     local_vim.g.neovide_cursor_vfx_mode = "railgun"
   end
 
-  -- Undotree Configuration
-  local_vim.g.undotree_WindowLayout = 4
-  local_vim.g.undotree_SetFocusWhenToggle = 1
   return local_vim
 end

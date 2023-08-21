@@ -74,7 +74,6 @@ return {
   },
 
   -- Code Manipulation and Navigation
-  { "mbbill/undotree", event = "User AstroFile" },
 
   -- Appearance
   {

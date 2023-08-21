@@ -106,8 +106,6 @@ local nmap = {
   ["<leader>ed"] = { '"+d', desc = "Cut into clipboard" },
   ["<leader>eD"] = { '"_d', desc = "Delete into the void" },
   ["<leader>ey"] = { '"+y', desc = "Yank into clipboard" },
-  ["<leader>et"] = { "<cmd>UndotreeToggle<cr>", desc = "Toggle Undotree" },
-  ["<leader>ef"] = { "<cmd>UndotreeFocus<cr>", desc = "Focus Undotree" },
 
   -- Tests
   ["<leader>T"] = { name = "󰙨 Test" },

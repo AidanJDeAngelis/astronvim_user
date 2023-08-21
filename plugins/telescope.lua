@@ -6,6 +6,10 @@ return {
         "nvim-telescope/telescope-project.nvim",
       },
     },
+    opts = function(_, opts)
+      opts.defaults.layout_config.horizontal.preview_width = 0.65
+      return opts
+    end,
     config = function(plugin, opts)
       -- run the core AstroNvim configuration function with the options table
       require "plugins.configs.telescope"(plugin, opts)
