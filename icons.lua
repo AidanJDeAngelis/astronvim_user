@@ -1,5 +1,5 @@
 -- add new user interface icon
 return {
-  VimIcon = "",
+  VimIcon = "",
   ScrollText = "",
 }

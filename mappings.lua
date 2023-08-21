@@ -72,7 +72,8 @@ local nmap = {
   ["<leader>fhd"] = { function() require("harpoon.mark").rm_file() end, desc = "Remove file" },
 
   -- Appearance
-  ["<leader>FML"] = { "<cmd>CellularAutomaton make_it_rain<cr>", desc = "F*** My Life" },
+  ["<leader>."] = { desc = "which_key_ignore" },
+  ["<leader>..."] = { "<cmd>CellularAutomaton make_it_rain<cr>", desc = "F*** My Life" },
   ["<leader>ut"] = {
     function() require("tint").toggle() end,
     desc = "Toggle tint",

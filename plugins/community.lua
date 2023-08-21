@@ -40,6 +40,42 @@ return {
   -- Code Awareness
   { import = "astrocommunity.syntax.hlargs-nvim" },
   -- Appearance
+  { import = "astrocommunity.split-and-window.edgy-nvim" },
+  {
+    "edgy.nvim",
+    opts = function(_, opts)
+      opts.animate = { enabled = false }
+      table.insert(opts.right, 1, {
+        title = "Undotree",
+        ft = "undotree",
+        size = { height = 0.5 },
+      })
+      table.insert(opts.right, 1, { ft = "spectre_panel", size = { width = 0.25, height = 0.5 } })
+      table.insert(opts.bottom, {
+        title = "Undotree Diff",
+        ft = "diff",
+        size = { height = 20 },
+      })
+      opts.left = {
+        {
+          title = "Files",
+          ft = "neo-tree",
+          filter = function(buf) return vim.b[buf].neo_tree_source == "filesystem" end,
+          pinned = true,
+          open = "Neotree position=left filesystem",
+          size = { height = 0.5 },
+        },
+        {
+          title = "Git Status",
+          ft = "neo-tree",
+          filter = function(buf) return vim.b[buf].neo_tree_source == "git_status" end,
+          pinned = true,
+          open = "Neotree position=right git_status",
+        },
+        "neo-tree",
+      }
+    end,
+  },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
   {
