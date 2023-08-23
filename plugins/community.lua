@@ -4,7 +4,6 @@ return {
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
   -- Completion
-  { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.codeium-vim" },
   -- Terminal Integration
   { import = "astrocommunity.terminal-integration.flatten-nvim" },
@@ -45,7 +44,7 @@ return {
     "edgy.nvim",
     opts = function(_, opts)
       opts.animate = { enabled = false }
-      table.insert(opts.right, 1, {
+      table.insert(opts.right, {
         title = "Undotree",
         ft = "undotree",
         size = { height = 0.5 },
