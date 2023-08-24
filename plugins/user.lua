@@ -39,6 +39,7 @@ return {
   -- File Navigation
   {
     url = "angaidan@git.amazon.com:pkg/NinjaHooks",
+    cond = os.getenv "USER" == "angaidan",
     branch = "mainline",
     lazy = false,
     config = function(plugin)
