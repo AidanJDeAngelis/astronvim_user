@@ -3,9 +3,10 @@ return {
   "AstroNvim/astrocommunity",
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
-  -- Completion
-  -- Terminal Integration
-  { import = "astrocommunity.terminal-integration.flatten-nvim" },
+  -- Git
+  { import = "astrocommunity.git.neogit" },
+  { import = "astrocommunity.git.diffview-nvim" },
+
   -- Languages
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.typescript" },
