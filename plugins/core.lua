@@ -1,6 +1,17 @@
 return {
   -- Reconfigure defaults
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = function(_, opts)
+      table.insert(opts.event_handlers, {
+        event = "vim_buffer_enter",
+        handler = function()
+          if vim.bo.filetype == "neo-tree" then vim.cmd "setlocal rnu" end
+        end,
+      })
+    end,
+  },
+  {
     "AstroNvim/astrotheme",
     lazy = false,
     priority = 1000,
