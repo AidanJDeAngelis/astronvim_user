@@ -24,6 +24,14 @@ return {
   -- Motion
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
+  { import = "astrocommunity.motion.nvim-spider" },
+  {
+    "nvim-spider",
+    opts = function(_, opts)
+      vim.opt.iskeyword:append "-"
+      return opts
+    end,
+  },
   { import = "astrocommunity.debugging.nvim-bqf" },
   -- Text Manipulation
   { import = "astrocommunity.project.nvim-spectre" },
