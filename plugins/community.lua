@@ -44,6 +44,7 @@ return {
   },
   -- Diagnostics
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
   -- Code Awareness
   { import = "astrocommunity.syntax.hlargs-nvim" },
   -- Appearance
