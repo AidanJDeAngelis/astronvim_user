@@ -1,9 +1,9 @@
 -- Set colorscheme to use
 local colorschemes = {
   "tokyonight-night",
-  -- "astrodark",
   "fluoromachine",
   "oh-my-monokai",
+  "onedark_dark",
 }
 
 math.randomseed(os.clock())

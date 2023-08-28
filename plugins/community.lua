@@ -85,6 +85,14 @@ return {
     end,
   },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
+  {
+    "onedarkpro.nvim",
+    opts = function(_, opts)
+      opts.options.highlight_inactive_windows = false
+      return opts
+    end,
+  },
   { import = "astrocommunity.utility.noice-nvim" },
   {
     "noice.nvim",
