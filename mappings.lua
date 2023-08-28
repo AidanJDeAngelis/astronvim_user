@@ -74,24 +74,9 @@ local nmap = {
   -- Appearance
   ["<leader>."] = { desc = "which_key_ignore" },
   ["<leader>..."] = { "<cmd>CellularAutomaton make_it_rain<cr>", desc = "F*** My Life" },
-  ["<leader>ut"] = {
-    function() require("tint").toggle() end,
-    desc = "Toggle tint",
-  },
-  ["<leader>uT"] = {
-    function()
-      vim.cmd "Twilight"
-      require("hlargs").toggle()
-    end,
-    desc = "Toggle Twilight",
-  },
   ["<leader>uh"] = {
     function() require("hlargs").toggle() end,
     desc = "Toggle hlargs",
-  },
-  ["<leader>uz"] = {
-    "<cmd>ZenMode<CR>",
-    desc = "Toggle zen mode",
   },
 
   -- Movement
@@ -99,7 +84,9 @@ local nmap = {
   ["<C-u>"] = { "<C-u>zz", desc = "Half page up" },
   ["n"] = { "nzzzv", desc = "Next" },
   ["N"] = { "Nzzzv", desc = "Prev" },
-
+  ["J"] = { "mzJ`z", desc = "Join lines" },
+  [">"] = { ">>", desc = "Indent right" },
+  ["<"] = { "<<", desc = "Indent left" },
   -- Text Manipulation
   ["x"] = { '"_x', desc = "which_key_ignore", noremap = true },
   ["<leader>e"] = { name = " Edit", desc = " Edit" },
@@ -132,6 +119,10 @@ local vmap = {
   -- Movement
   ["<C-d>"] = nmap["<C-d>"],
   ["<C-u>"] = nmap["<C-u>"],
+  ["<"] = { "<gv", desc = "Indent left" },
+  [">"] = { ">gv", desc = "Indent right" },
+  ["J"] = { ":m '>+1<CR>gv=gv", desc = "Move block down" },
+  ["K"] = { ":m '<-2<CR>gv=gv", desc = "Move block up" },
   -- Text Manipulation
   ["p"] = { '"_dP', desc = "which_key_ignore" },
   ["<leader>e"] = nmap["<leader>e"],
