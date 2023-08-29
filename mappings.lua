@@ -10,8 +10,6 @@ local nmap = {
   ["<leader>C"] = false,
   ["<leader>h"] = false,
   ["<leader>n"] = false,
-  ["<leader>q"] = false,
-  ["<leader>w"] = false,
   ["<leader>ft"] = false,
   ["<leader>fm"] = false,
   ["<leader>tn"] = false,
@@ -24,18 +22,6 @@ local nmap = {
   ["<leader>uY"] = false, -- TODO: move to LSP mappings
 
   -- Remap Builtins
-  ["<leader>fe"] = { name = "󰙅 Explorer" },
-  ["<leader>fet"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
-  ["<leader>fef"] = {
-    function()
-      if vim.bo.filetype == "neo-tree" then
-        vim.cmd.wincmd "p"
-      else
-        vim.cmd.Neotree "focus"
-      end
-    end,
-    desc = "Toggle Explorer Focus",
-  },
   ["<leader>fo"] = { function() require("telescope.builtin").oldfiles { only_cwd = true } end, desc = "Find history" },
   ["<leader>fH"] = { function() require("telescope.builtin").help_tags() end, desc = "Find help" },
   ["<leader>bq"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" },
@@ -61,7 +47,7 @@ local nmap = {
     desc = "Pick Window",
   },
 
-  -- Files
+  -- Files / Search
   ["<leader>fp"] = {
     function() require("telescope").extensions.project.project {} end,
     desc = "Find projects",
