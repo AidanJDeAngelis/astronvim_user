@@ -179,6 +179,7 @@ return {
   },
   {
     "goolord/alpha-nvim",
+    enabled = false,
     opts = function(plugin, opts)
       require "plugins.configs.alpha"(plugin, opts)
       require "alpha.term"
