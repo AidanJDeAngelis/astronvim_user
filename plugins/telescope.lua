@@ -8,6 +8,10 @@ return {
     },
     opts = function(_, opts)
       opts.defaults.layout_config.horizontal.preview_width = 0.65
+
+      opts.defaults.preview = opts.defaults.preview or {}
+      opts.defaults.preview.filesize_limit = 50
+      opts.defaults.preview.timeout = 500
       return opts
     end,
     config = function(plugin, opts)
