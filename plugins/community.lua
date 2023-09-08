@@ -37,6 +37,7 @@ return {
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.lsp.inc-rename-nvim" },
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
+  { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.editing-support.yanky-nvim" },
   {
     "yanky.nvim",

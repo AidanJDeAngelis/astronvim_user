@@ -120,6 +120,13 @@ return {
 
   -- Code Manipulation and Navigation
   { "mbbill/undotree", event = "User AstroFile" },
+  {
+    "antosha417/nvim-lsp-file-operations",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-neo-tree/neo-tree.nvim",
+    },
+  },
 
   -- Appearance
   {
