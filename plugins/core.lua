@@ -1,5 +1,6 @@
 return {
   -- Reconfigure defaults
+  { "akinsho/toggleterm.nvim", enabled = false },
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = function(_, opts)
