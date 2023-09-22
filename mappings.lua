@@ -71,8 +71,6 @@ local nmap = {
   ["n"] = { "nzzzv", desc = "Next" },
   ["N"] = { "Nzzzv", desc = "Prev" },
   ["J"] = { "mzJ`z", desc = "Join lines" },
-  [">"] = { ">>", desc = "Indent right" },
-  ["<"] = { "<<", desc = "Indent left" },
   -- Text Manipulation
   ["x"] = { '"_x', desc = "which_key_ignore", noremap = true },
   ["<leader>e"] = { name = " Edit", desc = " Edit" },
