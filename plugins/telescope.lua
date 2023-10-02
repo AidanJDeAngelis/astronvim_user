@@ -4,8 +4,10 @@ return {
     dependencies = {
       {
         "nvim-telescope/telescope-project.nvim",
+        "ThePrimeagen/git-worktree.nvim",
       },
     },
+    lazy = false,
     opts = function(_, opts)
       opts.defaults.layout_config.horizontal.preview_width = 0.65
 
@@ -21,6 +23,7 @@ return {
       -- require telescope and load extensions as necessary
       local telescope = require "telescope"
       telescope.load_extension "project"
+      telescope.load_extension "git_worktree"
     end,
   },
 }

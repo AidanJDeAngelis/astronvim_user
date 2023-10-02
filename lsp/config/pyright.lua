@@ -4,7 +4,7 @@ return {
       analysis = {
         autoImportCompletions = true,
         autoSearchPaths = true,
-        diagnosticMode = "openFilesOnly",
+        diagnosticMode = "workspace",
         typeCheckingMode = "basic",
         useLibraryCodeForTypes = true,
       },

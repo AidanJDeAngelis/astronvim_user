@@ -9,7 +9,7 @@ return {
 
   -- Languages
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.typescript" },
+  -- { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
   {
     "venv-selector.nvim",
@@ -19,7 +19,6 @@ return {
   { import = "astrocommunity.pack.ps1" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.toml" },
-  { import = "astrocommunity.pack.nix" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- Motion
   { import = "astrocommunity.motion.flash-nvim" },
@@ -38,11 +37,6 @@ return {
   { import = "astrocommunity.lsp.inc-rename-nvim" },
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
   { import = "astrocommunity.editing-support.treesj" },
-  { import = "astrocommunity.editing-support.yanky-nvim" },
-  {
-    "yanky.nvim",
-    opts = function(_, opts) opts.ring.history_length = 10 end,
-  },
   -- Diagnostics
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
